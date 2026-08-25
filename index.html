@@ -19,7 +19,6 @@
     </div>
 </header>
 
-
 <main>
 
     <section class="apresentacao">
@@ -36,72 +35,86 @@
 
     </section>
 
-
     <section class="galeria">
 
         <div class="foto destaque">
-            <img src="foto1.jpg"
-                 alt="Projeto Gondopar"
-                 onclick="abrirImagem(0)">
+            <img
+                src="foto1.png"
+                alt="Projeto Gondopar"
+                onclick="abrirImagem(0)"
+            >
         </div>
 
         <div class="foto">
-            <img src="foto2.jpg"
-                 alt="Projeto Gondopar"
-                 onclick="abrirImagem(1)">
+            <img
+                src="foto2.png"
+                alt="Projeto Gondopar"
+                onclick="abrirImagem(1)"
+            >
         </div>
 
         <div class="foto">
-            <img src="foto3.jpg"
-                 alt="Projeto Gondopar"
-                 onclick="abrirImagem(2)">
+            <img
+                src="foto3.png"
+                alt="Projeto Gondopar"
+                onclick="abrirImagem(2)"
+            >
         </div>
 
         <div class="foto">
-            <img src="foto4.jpg"
-                 alt="Projeto Gondopar"
-                 onclick="abrirImagem(3)">
+            <img
+                src="foto4.png"
+                alt="Projeto Gondopar"
+                onclick="abrirImagem(3)"
+            >
         </div>
 
         <div class="foto">
-            <img src="foto5.jpg"
-                 alt="Projeto Gondopar"
-                 onclick="abrirImagem(4)">
-        </div>
-
-        <div class="foto">
-            <img src="foto6.jpg"
-                 alt="Projeto Gondopar"
-                 onclick="abrirImagem(5)">
+            <img
+                src="foto5.png"
+                alt="Projeto Gondopar"
+                onclick="abrirImagem(4)"
+            >
         </div>
 
     </section>
 
 </main>
 
-
-<!-- VISUALIZAÇÃO EM TELA CHEIA -->
-
 <div id="modal" class="modal">
 
-    <button class="fechar" onclick="fecharImagem()">
+    <button
+        class="fechar"
+        onclick="fecharImagem()"
+        aria-label="Fechar"
+    >
         ×
     </button>
 
-    <button class="anterior" onclick="imagemAnterior(event)">
+    <button
+        class="anterior"
+        onclick="imagemAnterior(event)"
+        aria-label="Imagem anterior"
+    >
         ‹
     </button>
 
-    <img id="imagemModal" alt="Projeto Gondopar">
+    <img
+        id="imagemModal"
+        alt="Projeto Gondopar"
+    >
 
-    <button class="proxima" onclick="proximaImagem(event)">
+    <button
+        class="proxima"
+        onclick="proximaImagem(event)"
+        aria-label="Próxima imagem"
+    >
         ›
     </button>
 
     <div id="contador" class="contador"></div>
 
 </div>
-
 
 <footer>
 
@@ -113,40 +126,39 @@
 
 </footer>
 
-
 <script>
 
 const imagens = [
-    "foto1.jpg",
-    "foto2.jpg",
-    "foto3.jpg",
-    "foto4.jpg",
-    "foto5.jpg",
-    "foto6.jpg"
+    "foto1.png",
+    "foto2.png",
+    "foto3.png",
+    "foto4.png",
+    "foto5.png"
 ];
 
 let imagemAtual = 0;
-
 
 function abrirImagem(indice) {
 
     imagemAtual = indice;
 
-    document.getElementById("modal").classList.add("ativo");
+    document
+        .getElementById("modal")
+        .classList.add("ativo");
 
     atualizarImagem();
 
     document.body.style.overflow = "hidden";
 }
 
-
 function fecharImagem() {
 
-    document.getElementById("modal").classList.remove("ativo");
+    document
+        .getElementById("modal")
+        .classList.remove("ativo");
 
     document.body.style.overflow = "auto";
 }
-
 
 function atualizarImagem() {
 
@@ -157,65 +169,70 @@ function atualizarImagem() {
         (imagemAtual + 1) + " / " + imagens.length;
 }
 
-
 function proximaImagem(event) {
 
-    event.stopPropagation();
+    if (event) {
+        event.stopPropagation();
+    }
 
     imagemAtual++;
 
-    if(imagemAtual >= imagens.length){
+    if (imagemAtual >= imagens.length) {
         imagemAtual = 0;
     }
 
     atualizarImagem();
 }
 
-
 function imagemAnterior(event) {
 
-    event.stopPropagation();
+    if (event) {
+        event.stopPropagation();
+    }
 
     imagemAtual--;
 
-    if(imagemAtual < 0){
+    if (imagemAtual < 0) {
         imagemAtual = imagens.length - 1;
     }
 
     atualizarImagem();
 }
 
+document
+    .getElementById("modal")
+    .addEventListener("click", function(event) {
 
-document.getElementById("modal").addEventListener(
-    "click",
-    function(event){
-
-        if(event.target === this){
+        if (event.target === this) {
             fecharImagem();
         }
 
+    });
+
+document.addEventListener("keydown", function(event) {
+
+    const modalAberto =
+        document
+            .getElementById("modal")
+            .classList.contains("ativo");
+
+    if (!modalAberto) {
+        return;
     }
-);
 
-
-document.addEventListener(
-    "keydown",
-    function(event){
-
-        if(event.key === "Escape"){
-            fecharImagem();
-        }
-
-        if(event.key === "ArrowRight"){
-            proximaImagem(event);
-        }
-
-        if(event.key === "ArrowLeft"){
-            imagemAnterior(event);
-        }
-
+    if (event.key === "Escape") {
+        fecharImagem();
     }
-);
+
+    if (event.key === "ArrowRight") {
+        proximaImagem(event);
+    }
+
+    if (event.key === "ArrowLeft") {
+        imagemAnterior(event);
+    }
+
+});
 
 </script>
 
