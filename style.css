@@ -1,107 +1,191 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
 * {
     box-sizing: border-box;
 }
+
 
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
+
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
     background: #f6f6f6;
+
     color: #1d1d1f;
 }
 
 
-/* =========================
+
+/* =========================================
    CABEÇALHO
-========================= */
+========================================= */
 
 header {
+
     background: #ffffff;
-    border-bottom: 1px solid #e5e5e5;
-    padding: 25px 40px;
+
+    border-bottom:
+        1px solid #e5e5e5;
+
+    padding:
+        25px 40px;
 }
 
+
 .marca {
+
     max-width: 1300px;
+
     margin: auto;
 }
 
+
 .logo {
+
     color: #d80019;
+
     font-size: 32px;
+
     font-weight: 800;
+
     letter-spacing: 1px;
 }
 
+
 .subtitulo {
+
     margin-top: 3px;
+
     color: #777;
+
     font-size: 14px;
 }
 
 
-/* =========================
-   CONTEÚDO
-========================= */
+
+/* =========================================
+   CONTEÚDO PRINCIPAL
+========================================= */
 
 main {
+
     max-width: 1300px;
+
     margin: auto;
-    padding: 60px 30px 80px;
+
+    padding:
+        60px 30px 80px;
 }
 
 
-/* APRESENTAÇÃO */
+
+/* =========================================
+   APRESENTAÇÃO
+========================================= */
 
 .apresentacao {
-    max-width: 760px;
+
+    max-width: 850px;
+
     margin-bottom: 45px;
 }
 
+
+
+/* CASES GONDOPAR */
+
 .categoria {
+
+    display: block;
+
     color: #d80019;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 2px;
+
+    font-size: 44px;
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    letter-spacing: 0;
+
+    margin-bottom: 12px;
 }
+
+
+
+/* PROJETOS QUE TRANSFORMAM ESPAÇOS */
 
 .apresentacao h1 {
-    margin: 12px 0 15px;
+
+    margin:
+        0 0 15px;
+
     font-size: 44px;
+
     line-height: 1.1;
+
+    font-weight: 700;
 }
 
+
 .apresentacao p {
+
     margin: 0;
+
+    max-width: 760px;
+
     color: #666;
+
     font-size: 17px;
+
     line-height: 1.7;
 }
 
 
-/* =========================
+
+/* =========================================
    GALERIA
-========================= */
+========================================= */
 
 .galeria {
+
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     gap: 18px;
 }
 
+
 .foto {
+
     overflow: hidden;
+
     border-radius: 10px;
+
     background: #ddd;
 }
 
+
 .foto img {
+
     display: block;
 
     width: 100%;
+
     height: 100%;
 
     aspect-ratio: 4 / 3;
@@ -115,40 +199,62 @@ main {
         filter 0.35s ease;
 }
 
+
 .foto:hover img {
-    transform: scale(1.035);
-    filter: brightness(0.92);
+
+    transform:
+        scale(1.035);
+
+    filter:
+        brightness(0.92);
 }
 
 
-/* FOTO PRINCIPAL */
+
+/* =========================================
+   FOTO PRINCIPAL
+========================================= */
 
 .foto.destaque {
-    grid-column: span 2;
-    grid-row: span 2;
+
+    grid-column:
+        span 2;
+
+    grid-row:
+        span 2;
 }
 
+
 .foto.destaque img {
+
     aspect-ratio: auto;
+
     min-height: 100%;
 }
 
 
-/* =========================
-   VISUALIZAÇÃO TELA CHEIA
-========================= */
+
+/* =========================================
+   VISUALIZAÇÃO EM TELA CHEIA
+========================================= */
 
 .modal {
+
     position: fixed;
+
     inset: 0;
 
-    background: rgba(0, 0, 0, 0.94);
+    background:
+        rgba(0, 0, 0, 0.94);
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     opacity: 0;
+
     visibility: hidden;
 
     transition: 0.25s;
@@ -156,20 +262,29 @@ main {
     z-index: 9999;
 }
 
+
 .modal.ativo {
+
     opacity: 1;
+
     visibility: visible;
 }
 
+
 .modal img {
+
     max-width: 88vw;
+
     max-height: 85vh;
 
     object-fit: contain;
 }
 
 
-/* CONTROLES */
+
+/* =========================================
+   CONTROLES DO ÁLBUM
+========================================= */
 
 .fechar,
 .anterior,
@@ -178,6 +293,7 @@ main {
     position: absolute;
 
     border: none;
+
     background: transparent;
 
     color: white;
@@ -187,34 +303,44 @@ main {
     z-index: 10000;
 }
 
+
 .fechar {
 
     top: 20px;
+
     right: 30px;
 
     font-size: 48px;
+
     font-weight: 200;
 }
+
 
 .anterior {
 
     left: 25px;
+
     top: 50%;
 
-    transform: translateY(-50%);
+    transform:
+        translateY(-50%);
 
     font-size: 65px;
 }
+
 
 .proxima {
 
     right: 25px;
+
     top: 50%;
 
-    transform: translateY(-50%);
+    transform:
+        translateY(-50%);
 
     font-size: 65px;
 }
+
 
 .contador {
 
@@ -230,132 +356,10 @@ main {
 }
 
 
-/* =========================
-   BOTÕES SOCIAIS FLUTUANTES
-========================= */
 
-.botoes-flutuantes {
-
-    position: fixed;
-
-    right: 24px;
-    bottom: 25px;
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: flex-end;
-
-    gap: 12px;
-
-    z-index: 9000;
-}
-
-
-/* BOTÃO */
-
-.botao-social {
-
-    height: 56px;
-    width: 56px;
-
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-decoration: none;
-
-    box-shadow:
-        0 5px 18px rgba(0, 0, 0, 0.18);
-
-    overflow: hidden;
-
-    transition:
-        width 0.3s ease,
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-
-/* ÍCONES */
-
-.botao-social i {
-
-    font-size: 27px;
-
-    min-width: 56px;
-
-    text-align: center;
-}
-
-
-/* TEXTO ESCONDIDO */
-
-.texto-social {
-
-    white-space: nowrap;
-
-    font-size: 14px;
-    font-weight: 600;
-
-    padding-right: 20px;
-
-    opacity: 0;
-
-    transition: opacity 0.2s;
-}
-
-
-/* EXPANDE NO COMPUTADOR */
-
-.botao-social:hover {
-
-    width: 165px;
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.23);
-}
-
-.botao-social:hover .texto-social {
-    opacity: 1;
-}
-
-
-/* WHATSAPP */
-
-.whatsapp {
-
-    background: #25D366;
-
-    color: #ffffff;
-}
-
-
-/* INSTAGRAM */
-
-.instagram {
-
-    color: #ffffff;
-
-    background:
-        radial-gradient(
-            circle at 30% 107%,
-            #fdf497 0%,
-            #fdf497 5%,
-            #fd5949 45%,
-            #d6249f 60%,
-            #285AEB 90%
-        );
-}
-
-
-/* =========================
+/* =========================================
    RODAPÉ
-========================= */
+========================================= */
 
 footer {
 
@@ -366,6 +370,7 @@ footer {
     display: flex;
 
     justify-content: center;
+
     align-items: center;
 
     gap: 15px;
@@ -373,40 +378,74 @@ footer {
     padding: 30px;
 }
 
+
 footer strong {
+
     color: #d80019;
 }
 
+
 footer span {
+
     color: #aaa;
 }
 
 
-/* =========================
-   CELULAR
-========================= */
+
+/* =========================================
+   CELULAR / TABLET
+========================================= */
 
 @media (max-width: 800px) {
 
+
     header {
+
         padding: 20px;
     }
 
+
     main {
-        padding: 40px 18px 60px;
+
+        padding:
+            40px 18px 60px;
     }
 
+
     .logo {
+
         font-size: 27px;
     }
 
+
+    .subtitulo {
+
+        font-size: 13px;
+    }
+
+
+
+    /* TÍTULOS */
+
+    .categoria {
+
+        font-size: 34px;
+
+        margin-bottom: 10px;
+    }
+
+
     .apresentacao h1 {
+
         font-size: 34px;
     }
 
+
     .apresentacao p {
+
         font-size: 16px;
     }
+
 
 
     /* GALERIA */
@@ -418,11 +457,14 @@ footer span {
         gap: 12px;
     }
 
+
     .foto.destaque {
 
         grid-column: auto;
+
         grid-row: auto;
     }
+
 
     .foto.destaque img,
     .foto img {
@@ -431,7 +473,8 @@ footer span {
     }
 
 
-    /* MODAL */
+
+    /* VISUALIZAÇÃO */
 
     .anterior {
 
@@ -440,6 +483,7 @@ footer span {
         font-size: 50px;
     }
 
+
     .proxima {
 
         right: 8px;
@@ -447,48 +491,14 @@ footer span {
         font-size: 50px;
     }
 
+
     .modal img {
 
         max-width: 95vw;
+
         max-height: 80vh;
     }
 
-
-    /* BOTÕES SOCIAIS */
-
-    .botoes-flutuantes {
-
-        right: 15px;
-        bottom: 15px;
-
-        gap: 10px;
-    }
-
-    .botao-social {
-
-        width: 52px;
-        height: 52px;
-    }
-
-    .botao-social i {
-
-        min-width: 52px;
-
-        font-size: 25px;
-    }
-
-
-    /* NO CELULAR NÃO EXPANDE */
-
-    .botao-social:hover {
-
-        width: 52px;
-    }
-
-    .texto-social {
-
-        display: none;
-    }
 
 
     /* RODAPÉ */
