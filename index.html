@@ -15,9 +15,12 @@
 <header>
     <div class="marca">
         <div class="logo">GONDOPAR</div>
-        <div class="subtitulo">soluções e mobiliários especiais</div>
+        <div class="subtitulo">
+            Gondopar - gôndolas e mobílias especiais
+        </div>
     </div>
 </header>
+
 
 <main>
 
@@ -35,8 +38,10 @@
 
     </section>
 
+
     <section class="galeria">
 
+        <!-- FOTO PRINCIPAL -->
         <div class="foto destaque">
             <img
                 src="foto1.png"
@@ -45,6 +50,7 @@
             >
         </div>
 
+        <!-- FOTO 2 -->
         <div class="foto">
             <img
                 src="foto2.png"
@@ -53,6 +59,7 @@
             >
         </div>
 
+        <!-- FOTO 3 -->
         <div class="foto">
             <img
                 src="foto3.png"
@@ -61,6 +68,7 @@
             >
         </div>
 
+        <!-- FOTO 4 -->
         <div class="foto">
             <img
                 src="foto4.png"
@@ -69,6 +77,7 @@
             >
         </div>
 
+        <!-- FOTO 5 -->
         <div class="foto">
             <img
                 src="foto5.png"
@@ -80,6 +89,9 @@
     </section>
 
 </main>
+
+
+<!-- GALERIA EM TELA CHEIA -->
 
 <div id="modal" class="modal">
 
@@ -116,15 +128,17 @@
 
 </div>
 
+
 <footer>
 
     <strong>GONDOPAR</strong>
 
     <span>
-        Soluções completas para o seu negócio.
+        Gôndolas e mobílias especiais.
     </span>
 
 </footer>
+
 
 <script>
 
@@ -137,6 +151,9 @@ const imagens = [
 ];
 
 let imagemAtual = 0;
+
+
+/* ABRIR FOTO */
 
 function abrirImagem(indice) {
 
@@ -151,6 +168,9 @@ function abrirImagem(indice) {
     document.body.style.overflow = "hidden";
 }
 
+
+/* FECHAR FOTO */
+
 function fecharImagem() {
 
     document
@@ -160,6 +180,9 @@ function fecharImagem() {
     document.body.style.overflow = "auto";
 }
 
+
+/* ATUALIZAR FOTO */
+
 function atualizarImagem() {
 
     document.getElementById("imagemModal").src =
@@ -168,6 +191,9 @@ function atualizarImagem() {
     document.getElementById("contador").innerText =
         (imagemAtual + 1) + " / " + imagens.length;
 }
+
+
+/* PRÓXIMA FOTO */
 
 function proximaImagem(event) {
 
@@ -184,6 +210,9 @@ function proximaImagem(event) {
     atualizarImagem();
 }
 
+
+/* FOTO ANTERIOR */
+
 function imagemAnterior(event) {
 
     if (event) {
@@ -199,6 +228,9 @@ function imagemAnterior(event) {
     atualizarImagem();
 }
 
+
+/* FECHAR CLICANDO NO FUNDO */
+
 document
     .getElementById("modal")
     .addEventListener("click", function(event) {
@@ -208,6 +240,9 @@ document
         }
 
     });
+
+
+/* CONTROLE PELO TECLADO */
 
 document.addEventListener("keydown", function(event) {
 
