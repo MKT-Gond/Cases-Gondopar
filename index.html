@@ -42,8 +42,6 @@
         }
 
 
-        /* BOLHAS */
-
         .social-flutuante a {
 
             width: 58px;
@@ -71,8 +69,6 @@
         }
 
 
-        /* EFEITO AO PASSAR O MOUSE */
-
         .social-flutuante a:hover {
 
             transform: scale(1.10);
@@ -82,15 +78,11 @@
         }
 
 
-        /* WHATSAPP */
-
         .botao-whatsapp {
 
             background: #25D366;
         }
 
-
-        /* INSTAGRAM */
 
         .botao-instagram {
 
@@ -105,8 +97,6 @@
                 );
         }
 
-
-        /* CELULAR */
 
         @media(max-width:800px){
 
@@ -142,13 +132,11 @@
 
     <div class="marca">
 
-        <div class="logo">
-            GONDOPAR
-        </div>
-
-        <div class="subtitulo">
-            Gondopar | Gôndolas e mobílias especiais
-        </div>
+        <img
+            src="logo.png"
+            alt="Gondopar - Gôndolas e mobiliários especiais"
+            class="logo-gondopar"
+        >
 
     </div>
 
@@ -190,8 +178,6 @@
     <section class="galeria">
 
 
-        <!-- FOTO PRINCIPAL -->
-
         <div class="foto destaque">
 
             <img
@@ -202,8 +188,6 @@
 
         </div>
 
-
-        <!-- FOTO 2 -->
 
         <div class="foto">
 
@@ -216,8 +200,6 @@
         </div>
 
 
-        <!-- FOTO 3 -->
-
         <div class="foto">
 
             <img
@@ -229,8 +211,6 @@
         </div>
 
 
-        <!-- FOTO 4 -->
-
         <div class="foto">
 
             <img
@@ -241,8 +221,6 @@
 
         </div>
 
-
-        <!-- FOTO 5 -->
 
         <div class="foto">
 
@@ -269,8 +247,6 @@
 <div id="modal" class="modal">
 
 
-    <!-- FECHAR -->
-
     <button
         class="fechar"
         onclick="fecharImagem()"
@@ -279,8 +255,6 @@
         ×
     </button>
 
-
-    <!-- ANTERIOR -->
 
     <button
         class="anterior"
@@ -291,15 +265,11 @@
     </button>
 
 
-    <!-- IMAGEM -->
-
     <img
         id="imagemModal"
         alt="Projeto Gondopar"
     >
 
-
-    <!-- PRÓXIMA -->
 
     <button
         class="proxima"
@@ -309,8 +279,6 @@
         ›
     </button>
 
-
-    <!-- CONTADOR -->
 
     <div
         id="contador"
@@ -407,8 +375,6 @@
 
 
 
-    /* ABRIR IMAGEM */
-
     function abrirImagem(indice){
 
         imagemAtual = indice;
@@ -425,8 +391,6 @@
 
 
 
-    /* FECHAR IMAGEM */
-
     function fecharImagem(){
 
         document
@@ -438,8 +402,6 @@
     }
 
 
-
-    /* ATUALIZAR IMAGEM */
 
     function atualizarImagem(){
 
@@ -458,8 +420,6 @@
     }
 
 
-
-    /* PRÓXIMA IMAGEM */
 
     function proximaImagem(event){
 
@@ -480,8 +440,6 @@
     }
 
 
-
-    /* IMAGEM ANTERIOR */
 
     function imagemAnterior(event){
 
@@ -504,8 +462,6 @@
 
 
 
-    /* FECHAR CLICANDO FORA DA FOTO */
-
     document
         .getElementById("modal")
         .addEventListener(
@@ -522,8 +478,6 @@
         );
 
 
-
-    /* CONTROLE PELO TECLADO */
 
     document.addEventListener(
         "keydown",
