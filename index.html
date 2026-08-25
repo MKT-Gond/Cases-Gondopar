@@ -3,126 +3,130 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<title>Cases | Gondopar</title>
+    <title>Cases | Gondopar</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-<!-- ÍCONES -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- ÍCONES INSTAGRAM E WHATSAPP -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
 
-<style>
+    <style>
 
-/* =========================================
-   BOTÕES FLUTUANTES
-========================================= */
+        /* =========================================
+           BOTÕES FLUTUANTES
+        ========================================= */
 
-.social-flutuante {
+        .social-flutuante {
 
-    position: fixed;
+            position: fixed;
 
-    right: 25px;
-    bottom: 25px;
+            right: 25px;
+            bottom: 25px;
 
-    display: flex;
-    flex-direction: column;
+            display: flex;
+            flex-direction: column;
 
-    gap: 12px;
+            gap: 12px;
 
-    z-index: 99999;
-}
-
-
-/* BOLHAS */
-
-.social-flutuante a {
-
-    width: 58px;
-    height: 58px;
-
-    border-radius: 50%;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    text-decoration: none;
-
-    color: white;
-
-    font-size: 29px;
-
-    box-shadow:
-    0 5px 18px rgba(0,0,0,0.25);
-
-    transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
+            z-index: 99999;
+        }
 
 
-/* EFEITO */
+        /* BOLHAS */
 
-.social-flutuante a:hover {
+        .social-flutuante a {
 
-    transform: scale(1.10);
+            width: 58px;
+            height: 58px;
 
-    box-shadow:
-    0 8px 25px rgba(0,0,0,0.30);
-}
+            border-radius: 50%;
 
+            display: flex;
 
-/* WHATSAPP */
+            align-items: center;
+            justify-content: center;
 
-.botao-whatsapp {
+            text-decoration: none;
 
-    background: #25D366;
-}
+            color: white;
 
+            font-size: 29px;
 
-/* INSTAGRAM */
+            box-shadow:
+                0 5px 18px rgba(0,0,0,0.25);
 
-.botao-instagram {
-
-    background:
-    radial-gradient(
-        circle at 30% 107%,
-        #fdf497 0%,
-        #fdf497 5%,
-        #fd5949 45%,
-        #d6249f 60%,
-        #285AEB 90%
-    );
-}
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
 
 
-/* CELULAR */
+        /* EFEITO AO PASSAR O MOUSE */
 
-@media(max-width:800px){
+        .social-flutuante a:hover {
 
-    .social-flutuante {
+            transform: scale(1.10);
 
-        right: 15px;
-        bottom: 15px;
-    }
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.30);
+        }
 
-    .social-flutuante a {
 
-        width: 52px;
-        height: 52px;
+        /* WHATSAPP */
 
-        font-size: 26px;
-    }
+        .botao-whatsapp {
 
-}
+            background: #25D366;
+        }
 
-</style>
+
+        /* INSTAGRAM */
+
+        .botao-instagram {
+
+            background:
+                radial-gradient(
+                    circle at 30% 107%,
+                    #fdf497 0%,
+                    #fdf497 5%,
+                    #fd5949 45%,
+                    #d6249f 60%,
+                    #285AEB 90%
+                );
+        }
+
+
+        /* CELULAR */
+
+        @media(max-width:800px){
+
+            .social-flutuante {
+
+                right: 15px;
+                bottom: 15px;
+            }
+
+            .social-flutuante a {
+
+                width: 52px;
+                height: 52px;
+
+                font-size: 26px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -130,375 +134,435 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <body>
 
 
+<!-- =========================================
+     CABEÇALHO
+========================================= -->
+
 <header>
 
-<div class="marca">
+    <div class="marca">
 
-<div class="logo">
-GONDOPAR
-</div>
+        <div class="logo">
+            GONDOPAR
+        </div>
 
-<div class="subtitulo">
-Gondopar | Gôndolas e mobílias especiais
-</div>
+        <div class="subtitulo">
+            Gondopar | Gôndolas e mobílias especiais
+        </div>
 
-</div>
+    </div>
 
 </header>
 
 
+
+<!-- =========================================
+     CONTEÚDO
+========================================= -->
+
 <main>
 
 
-<section class="apresentacao">
+    <section class="apresentacao">
 
-<span class="categoria">
-CASES GONDOPAR
-</span>
+        <span class="categoria">
+            CASES GONDOPAR
+        </span>
 
-<h1>
-Projetos que transformam espaços
-</h1>
+        <h1>
+            Projetos que transformam espaços
+        </h1>
 
-<p>
+        <p>
+            Conheça alguns dos projetos desenvolvidos pela Gondopar,
+            unindo funcionalidade, organização e soluções personalizadas
+            para cada negócio.
+        </p>
 
-Conheça alguns dos projetos desenvolvidos pela Gondopar,
-unindo funcionalidade, organização e soluções personalizadas
-para cada negócio.
-
-</p>
-
-</section>
+    </section>
 
 
 
-<!-- GALERIA -->
+    <!-- =========================================
+         GALERIA
+    ========================================= -->
 
-<section class="galeria">
-
-
-<div class="foto destaque">
-
-<img
-src="foto1.png"
-alt="Projeto Gondopar"
-onclick="abrirImagem(0)">
-
-</div>
+    <section class="galeria">
 
 
-<div class="foto">
+        <!-- FOTO PRINCIPAL -->
 
-<img
-src="foto2.png"
-alt="Projeto Gondopar"
-onclick="abrirImagem(1)">
+        <div class="foto destaque">
 
-</div>
+            <img
+                src="foto1.png"
+                alt="Projeto Gondopar"
+                onclick="abrirImagem(0)"
+            >
 
-
-<div class="foto">
-
-<img
-src="foto3.png"
-alt="Projeto Gondopar"
-onclick="abrirImagem(2)">
-
-</div>
+        </div>
 
 
-<div class="foto">
+        <!-- FOTO 2 -->
 
-<img
-src="foto4.png"
-alt="Projeto Gondopar"
-onclick="abrirImagem(3)">
+        <div class="foto">
 
-</div>
+            <img
+                src="foto2.png"
+                alt="Projeto Gondopar"
+                onclick="abrirImagem(1)"
+            >
 
-
-<div class="foto">
-
-<img
-src="foto5.png"
-alt="Projeto Gondopar"
-onclick="abrirImagem(4)">
-
-</div>
+        </div>
 
 
-</section>
+        <!-- FOTO 3 -->
+
+        <div class="foto">
+
+            <img
+                src="foto3.png"
+                alt="Projeto Gondopar"
+                onclick="abrirImagem(2)"
+            >
+
+        </div>
+
+
+        <!-- FOTO 4 -->
+
+        <div class="foto">
+
+            <img
+                src="foto4.png"
+                alt="Projeto Gondopar"
+                onclick="abrirImagem(3)"
+            >
+
+        </div>
+
+
+        <!-- FOTO 5 -->
+
+        <div class="foto">
+
+            <img
+                src="foto5.png"
+                alt="Projeto Gondopar"
+                onclick="abrirImagem(4)"
+            >
+
+        </div>
+
+
+    </section>
+
 
 </main>
 
 
 
-<!-- VISUALIZAÇÃO DAS FOTOS -->
+<!-- =========================================
+     VISUALIZAÇÃO DAS FOTOS EM TELA CHEIA
+========================================= -->
 
 <div id="modal" class="modal">
 
 
-<button
-class="fechar"
-onclick="fecharImagem()">
+    <!-- FECHAR -->
 
-×
-
-</button>
-
-
-<button
-class="anterior"
-onclick="imagemAnterior(event)">
-
-‹
-
-</button>
+    <button
+        class="fechar"
+        onclick="fecharImagem()"
+        aria-label="Fechar"
+    >
+        ×
+    </button>
 
 
-<img
-id="imagemModal"
-alt="Projeto Gondopar">
+    <!-- ANTERIOR -->
+
+    <button
+        class="anterior"
+        onclick="imagemAnterior(event)"
+        aria-label="Imagem anterior"
+    >
+        ‹
+    </button>
 
 
-<button
-class="proxima"
-onclick="proximaImagem(event)">
+    <!-- IMAGEM -->
 
-›
+    <img
+        id="imagemModal"
+        alt="Projeto Gondopar"
+    >
 
-</button>
+
+    <!-- PRÓXIMA -->
+
+    <button
+        class="proxima"
+        onclick="proximaImagem(event)"
+        aria-label="Próxima imagem"
+    >
+        ›
+    </button>
 
 
-<div
-id="contador"
-class="contador">
+    <!-- CONTADOR -->
+
+    <div
+        id="contador"
+        class="contador"
+    >
+    </div>
+
 
 </div>
 
 
-</div>
 
-
-
-<!-- =====================================
+<!-- =========================================
      BOTÕES FLUTUANTES
-===================================== -->
+========================================= -->
 
 <div class="social-flutuante">
 
 
-<!-- INSTAGRAM -->
+    <!-- INSTAGRAM -->
 
-<a
-href="https://www.instagram.com/gondopar/"
-target="_blank"
-rel="noopener noreferrer"
-class="botao-instagram"
-title="Instagram Gondopar"
-aria-label="Instagram Gondopar">
+    <a
+        href="https://www.instagram.com/gondopar/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="botao-instagram"
+        title="Instagram Gondopar"
+        aria-label="Instagram Gondopar"
+    >
 
-<i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-instagram"></i>
 
-</a>
+    </a>
 
 
 
-<!-- WHATSAPP -->
+    <!-- WHATSAPP -->
 
-<a
-href="https://wa.me/554184899144?text=Olá%21%20Conheci%20a%20Gondopar%20através%20dos%20cases%20e%20gostaria%20de%20mais%20informações."
-target="_blank"
-rel="noopener noreferrer"
-class="botao-whatsapp"
-title="Fale conosco pelo WhatsApp"
-aria-label="WhatsApp Gondopar">
+    <a
+        href="https://wa.me/554184899144?text=Olá%21%20Conheci%20a%20Gondopar%20através%20dos%20cases%20e%20gostaria%20de%20mais%20informações."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="botao-whatsapp"
+        title="Fale conosco pelo WhatsApp"
+        aria-label="WhatsApp Gondopar"
+    >
 
-<i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-whatsapp"></i>
 
-</a>
+    </a>
 
 
 </div>
 
 
 
+<!-- =========================================
+     RODAPÉ
+========================================= -->
+
 <footer>
 
-<strong>
-GONDOPAR
-</strong>
+    <strong>
+        GONDOPAR
+    </strong>
 
-<span>
-Gôndolas e mobílias especiais.
-</span>
+    <span>
+        Gôndolas e mobílias especiais.
+    </span>
 
 </footer>
 
 
 
+<!-- =========================================
+     JAVASCRIPT DA GALERIA
+========================================= -->
+
 <script>
 
 
-const imagens = [
+    const imagens = [
 
-"foto1.png",
-"foto2.png",
-"foto3.png",
-"foto4.png",
-"foto5.png"
+        "foto1.png",
+        "foto2.png",
+        "foto3.png",
+        "foto4.png",
+        "foto5.png"
 
-];
+    ];
 
 
-let imagemAtual = 0;
+    let imagemAtual = 0;
 
 
 
-function abrirImagem(indice){
+    /* ABRIR IMAGEM */
 
-imagemAtual = indice;
+    function abrirImagem(indice){
 
-document
-.getElementById("modal")
-.classList.add("ativo");
+        imagemAtual = indice;
 
-atualizarImagem();
+        document
+            .getElementById("modal")
+            .classList.add("ativo");
 
-document.body.style.overflow = "hidden";
+        atualizarImagem();
 
-}
+        document.body.style.overflow = "hidden";
 
+    }
 
 
-function fecharImagem(){
 
-document
-.getElementById("modal")
-.classList.remove("ativo");
+    /* FECHAR IMAGEM */
 
-document.body.style.overflow = "auto";
+    function fecharImagem(){
 
-}
+        document
+            .getElementById("modal")
+            .classList.remove("ativo");
 
+        document.body.style.overflow = "auto";
 
+    }
 
-function atualizarImagem(){
 
-document
-.getElementById("imagemModal")
-.src = imagens[imagemAtual];
 
+    /* ATUALIZAR IMAGEM */
 
-document
-.getElementById("contador")
-.innerText =
-(imagemAtual + 1)
-+ " / "
-+ imagens.length;
+    function atualizarImagem(){
 
-}
+        document
+            .getElementById("imagemModal")
+            .src = imagens[imagemAtual];
 
 
+        document
+            .getElementById("contador")
+            .innerText =
+                (imagemAtual + 1)
+                + " / "
+                + imagens.length;
 
-function proximaImagem(event){
+    }
 
-if(event){
-event.stopPropagation();
-}
 
-imagemAtual++;
 
-if(imagemAtual >= imagens.length){
+    /* PRÓXIMA IMAGEM */
 
-imagemAtual = 0;
+    function proximaImagem(event){
 
-}
+        if(event){
+            event.stopPropagation();
+        }
 
-atualizarImagem();
+        imagemAtual++;
 
-}
+        if(imagemAtual >= imagens.length){
 
+            imagemAtual = 0;
 
+        }
 
-function imagemAnterior(event){
+        atualizarImagem();
 
-if(event){
-event.stopPropagation();
-}
+    }
 
-imagemAtual--;
 
-if(imagemAtual < 0){
 
-imagemAtual =
-imagens.length - 1;
+    /* IMAGEM ANTERIOR */
 
-}
+    function imagemAnterior(event){
 
-atualizarImagem();
+        if(event){
+            event.stopPropagation();
+        }
 
-}
+        imagemAtual--;
 
+        if(imagemAtual < 0){
 
+            imagemAtual =
+                imagens.length - 1;
 
-/* FECHAR AO CLICAR FORA */
+        }
 
-document
-.getElementById("modal")
-.addEventListener(
-"click",
-function(event){
+        atualizarImagem();
 
-if(event.target === this){
+    }
 
-fecharImagem();
 
-}
 
-});
+    /* FECHAR CLICANDO FORA DA FOTO */
 
+    document
+        .getElementById("modal")
+        .addEventListener(
+            "click",
+            function(event){
 
+                if(event.target === this){
 
-/* TECLADO */
+                    fecharImagem();
 
-document.addEventListener(
-"keydown",
-function(event){
+                }
 
-const modalAberto =
-document
-.getElementById("modal")
-.classList
-.contains("ativo");
+            }
+        );
 
 
-if(!modalAberto){
-return;
-}
 
+    /* CONTROLE PELO TECLADO */
 
-if(event.key === "Escape"){
+    document.addEventListener(
+        "keydown",
+        function(event){
 
-fecharImagem();
+            const modalAberto =
+                document
+                    .getElementById("modal")
+                    .classList
+                    .contains("ativo");
 
-}
 
+            if(!modalAberto){
+                return;
+            }
 
-if(event.key === "ArrowRight"){
 
-proximaImagem(event);
+            if(event.key === "Escape"){
 
-}
+                fecharImagem();
 
+            }
 
-if(event.key === "ArrowLeft"){
 
-imagemAnterior(event);
+            if(event.key === "ArrowRight"){
 
-}
+                proximaImagem(event);
 
-});
+            }
+
+
+            if(event.key === "ArrowLeft"){
+
+                imagemAnterior(event);
+
+            }
+
+        }
+    );
 
 
 </script>
