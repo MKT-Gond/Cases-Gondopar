@@ -172,62 +172,137 @@
 
 
     <!-- =========================================
-         GALERIA
+         GALERIA - 10 FOTOS
     ========================================= -->
 
     <section class="galeria">
 
 
+        <!-- FOTO 1 -->
+
         <div class="foto destaque">
 
             <img
                 src="foto1.png"
-                alt="Projeto Gondopar"
+                alt="Case Gondopar - Foto 1"
                 onclick="abrirImagem(0)"
             >
 
         </div>
 
 
+        <!-- FOTO 2 -->
+
         <div class="foto">
 
             <img
                 src="foto2.png"
-                alt="Projeto Gondopar"
+                alt="Case Gondopar - Foto 2"
                 onclick="abrirImagem(1)"
             >
 
         </div>
 
 
+        <!-- FOTO 3 -->
+
         <div class="foto">
 
             <img
                 src="foto3.png"
-                alt="Projeto Gondopar"
+                alt="Case Gondopar - Foto 3"
                 onclick="abrirImagem(2)"
             >
 
         </div>
 
 
+        <!-- FOTO 4 -->
+
         <div class="foto">
 
             <img
                 src="foto4.png"
-                alt="Projeto Gondopar"
+                alt="Case Gondopar - Foto 4"
                 onclick="abrirImagem(3)"
             >
 
         </div>
 
 
+        <!-- FOTO 5 -->
+
         <div class="foto">
 
             <img
                 src="foto5.png"
-                alt="Projeto Gondopar"
+                alt="Case Gondopar - Foto 5"
                 onclick="abrirImagem(4)"
+            >
+
+        </div>
+
+
+        <!-- FOTO 6 -->
+
+        <div class="foto">
+
+            <img
+                src="foto6.png"
+                alt="Case Gondopar - Foto 6"
+                onclick="abrirImagem(5)"
+            >
+
+        </div>
+
+
+        <!-- FOTO 7 -->
+
+        <div class="foto">
+
+            <img
+                src="foto7.png"
+                alt="Case Gondopar - Foto 7"
+                onclick="abrirImagem(6)"
+            >
+
+        </div>
+
+
+        <!-- FOTO 8 -->
+
+        <div class="foto">
+
+            <img
+                src="foto8.png"
+                alt="Case Gondopar - Foto 8"
+                onclick="abrirImagem(7)"
+            >
+
+        </div>
+
+
+        <!-- FOTO 9 -->
+
+        <div class="foto">
+
+            <img
+                src="foto9.png"
+                alt="Case Gondopar - Foto 9"
+                onclick="abrirImagem(8)"
+            >
+
+        </div>
+
+
+        <!-- FOTO 10 -->
+
+        <div class="foto">
+
+            <img
+                src="foto10.png"
+                alt="Case Gondopar - Foto 10"
+                onclick="abrirImagem(9)"
             >
 
         </div>
@@ -241,7 +316,7 @@
 
 
 <!-- =========================================
-     VISUALIZAÇÃO DAS FOTOS EM TELA CHEIA
+     VISUALIZAÇÃO EM TELA CHEIA
 ========================================= -->
 
 <div id="modal" class="modal">
@@ -360,13 +435,20 @@
 <script>
 
 
+    /* LISTA DAS 10 FOTOS */
+
     const imagens = [
 
         "foto1.png",
         "foto2.png",
         "foto3.png",
         "foto4.png",
-        "foto5.png"
+        "foto5.png",
+        "foto6.png",
+        "foto7.png",
+        "foto8.png",
+        "foto9.png",
+        "foto10.png"
 
     ];
 
@@ -374,6 +456,8 @@
     let imagemAtual = 0;
 
 
+
+    /* ABRIR IMAGEM */
 
     function abrirImagem(indice){
 
@@ -391,6 +475,8 @@
 
 
 
+    /* FECHAR IMAGEM */
+
     function fecharImagem(){
 
         document
@@ -402,6 +488,8 @@
     }
 
 
+
+    /* ATUALIZAR IMAGEM */
 
     function atualizarImagem(){
 
@@ -420,6 +508,8 @@
     }
 
 
+
+    /* PRÓXIMA IMAGEM */
 
     function proximaImagem(event){
 
@@ -440,6 +530,8 @@
     }
 
 
+
+    /* IMAGEM ANTERIOR */
 
     function imagemAnterior(event){
 
@@ -462,6 +554,8 @@
 
 
 
+    /* FECHAR CLICANDO NO FUNDO */
+
     document
         .getElementById("modal")
         .addEventListener(
@@ -478,6 +572,8 @@
         );
 
 
+
+    /* CONTROLE PELO TECLADO */
 
     document.addEventListener(
         "keydown",
