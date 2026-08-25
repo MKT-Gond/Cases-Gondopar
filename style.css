@@ -40,7 +40,7 @@ header {
         1px solid #e5e5e5;
 
     padding:
-        25px 40px;
+        22px 40px;
 }
 
 
@@ -49,28 +49,26 @@ header {
     max-width: 1300px;
 
     margin: auto;
+
+    display: flex;
+
+    align-items: center;
 }
 
 
-.logo {
+/* LOGO OFICIAL */
 
-    color: #d80019;
+.logo-gondopar {
 
-    font-size: 32px;
+    display: block;
 
-    font-weight: 800;
+    width: 330px;
 
-    letter-spacing: 1px;
-}
+    max-width: 100%;
 
+    height: auto;
 
-.subtitulo {
-
-    margin-top: 3px;
-
-    color: #777;
-
-    font-size: 14px;
+    object-fit: contain;
 }
 
 
@@ -104,8 +102,6 @@ main {
 
 
 
-/* CASES GONDOPAR */
-
 .categoria {
 
     display: block;
@@ -124,8 +120,6 @@ main {
 }
 
 
-
-/* PROJETOS QUE TRANSFORMAM ESPAÇOS */
 
 .apresentacao h1 {
 
@@ -401,7 +395,16 @@ footer span {
 
     header {
 
-        padding: 20px;
+        padding:
+            18px 20px;
+    }
+
+
+    .logo-gondopar {
+
+        width: 260px;
+
+        max-width: 90%;
     }
 
 
@@ -412,20 +415,6 @@ footer span {
     }
 
 
-    .logo {
-
-        font-size: 27px;
-    }
-
-
-    .subtitulo {
-
-        font-size: 13px;
-    }
-
-
-
-    /* TÍTULOS */
 
     .categoria {
 
@@ -447,8 +436,6 @@ footer span {
     }
 
 
-
-    /* GALERIA */
 
     .galeria {
 
@@ -474,8 +461,6 @@ footer span {
 
 
 
-    /* VISUALIZAÇÃO */
-
     .anterior {
 
         left: 8px;
@@ -500,8 +485,6 @@ footer span {
     }
 
 
-
-    /* RODAPÉ */
 
     footer {
 
