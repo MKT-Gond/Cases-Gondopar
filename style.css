@@ -56,7 +56,7 @@ header {
 }
 
 
-/* LOGO OFICIAL */
+/* LOGO */
 
 .logo-gondopar {
 
@@ -74,7 +74,7 @@ header {
 
 
 /* =========================================
-   CONTEÚDO PRINCIPAL
+   CONTEÚDO
 ========================================= */
 
 main {
@@ -101,7 +101,6 @@ main {
 }
 
 
-
 .categoria {
 
     display: block;
@@ -118,7 +117,6 @@ main {
 
     margin-bottom: 12px;
 }
-
 
 
 .apresentacao h1 {
@@ -205,9 +203,7 @@ main {
 
 
 
-/* =========================================
-   FOTO PRINCIPAL
-========================================= */
+/* FOTO PRINCIPAL */
 
 .foto.destaque {
 
@@ -229,7 +225,7 @@ main {
 
 
 /* =========================================
-   VISUALIZAÇÃO EM TELA CHEIA
+   MODAL
 ========================================= */
 
 .modal {
@@ -277,7 +273,7 @@ main {
 
 
 /* =========================================
-   CONTROLES DO ÁLBUM
+   CONTROLES DA GALERIA
 ========================================= */
 
 .fechar,
@@ -415,7 +411,6 @@ footer span {
     }
 
 
-
     .categoria {
 
         font-size: 34px;
@@ -436,6 +431,7 @@ footer span {
     }
 
 
+    /* GALERIA */
 
     .galeria {
 
@@ -460,6 +456,7 @@ footer span {
     }
 
 
+    /* MODAL */
 
     .anterior {
 
@@ -485,6 +482,7 @@ footer span {
     }
 
 
+    /* RODAPÉ */
 
     footer {
 
