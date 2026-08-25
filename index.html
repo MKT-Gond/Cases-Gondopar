@@ -2,327 +2,507 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Cases | Gondopar</title>
+<meta charset="UTF-8">
 
-    <link rel="stylesheet" href="style.css">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-    <!-- ÍCONES -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<title>Cases | Gondopar</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- ÍCONES -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+/* =========================================
+   BOTÕES FLUTUANTES
+========================================= */
+
+.social-flutuante {
+
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    z-index: 99999;
+}
+
+
+/* BOLHAS */
+
+.social-flutuante a {
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 29px;
+
+    box-shadow:
+    0 5px 18px rgba(0,0,0,0.25);
+
+    transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* EFEITO */
+
+.social-flutuante a:hover {
+
+    transform: scale(1.10);
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,0.30);
+}
+
+
+/* WHATSAPP */
+
+.botao-whatsapp {
+
+    background: #25D366;
+}
+
+
+/* INSTAGRAM */
+
+.botao-instagram {
+
+    background:
+    radial-gradient(
+        circle at 30% 107%,
+        #fdf497 0%,
+        #fdf497 5%,
+        #fd5949 45%,
+        #d6249f 60%,
+        #285AEB 90%
+    );
+}
+
+
+/* CELULAR */
+
+@media(max-width:800px){
+
+    .social-flutuante {
+
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .social-flutuante a {
+
+        width: 52px;
+        height: 52px;
+
+        font-size: 26px;
+    }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-<header>
-    <div class="marca">
-        <div class="logo">GONDOPAR</div>
 
-        <div class="subtitulo">
-            Gondopar | Gôndolas e mobílias especiais
-        </div>
-    </div>
+<header>
+
+<div class="marca">
+
+<div class="logo">
+GONDOPAR
+</div>
+
+<div class="subtitulo">
+Gondopar | Gôndolas e mobílias especiais
+</div>
+
+</div>
+
 </header>
 
 
 <main>
 
-    <section class="apresentacao">
 
-        <span class="categoria">
-            CASES GONDOPAR
-        </span>
+<section class="apresentacao">
 
-        <h1>
-            Projetos que transformam espaços
-        </h1>
+<span class="categoria">
+CASES GONDOPAR
+</span>
 
-        <p>
-            Conheça alguns dos projetos desenvolvidos pela Gondopar,
-            unindo funcionalidade, organização e soluções personalizadas
-            para cada negócio.
-        </p>
+<h1>
+Projetos que transformam espaços
+</h1>
 
-    </section>
+<p>
+
+Conheça alguns dos projetos desenvolvidos pela Gondopar,
+unindo funcionalidade, organização e soluções personalizadas
+para cada negócio.
+
+</p>
+
+</section>
 
 
-    <!-- GALERIA -->
 
-    <section class="galeria">
+<!-- GALERIA -->
 
-        <div class="foto destaque">
-            <img
-                src="foto1.png"
-                alt="Projeto Gondopar"
-                onclick="abrirImagem(0)"
-            >
-        </div>
+<section class="galeria">
 
-        <div class="foto">
-            <img
-                src="foto2.png"
-                alt="Projeto Gondopar"
-                onclick="abrirImagem(1)"
-            >
-        </div>
 
-        <div class="foto">
-            <img
-                src="foto3.png"
-                alt="Projeto Gondopar"
-                onclick="abrirImagem(2)"
-            >
-        </div>
+<div class="foto destaque">
 
-        <div class="foto">
-            <img
-                src="foto4.png"
-                alt="Projeto Gondopar"
-                onclick="abrirImagem(3)"
-            >
-        </div>
+<img
+src="foto1.png"
+alt="Projeto Gondopar"
+onclick="abrirImagem(0)">
 
-        <div class="foto">
-            <img
-                src="foto5.png"
-                alt="Projeto Gondopar"
-                onclick="abrirImagem(4)"
-            >
-        </div>
+</div>
 
-    </section>
+
+<div class="foto">
+
+<img
+src="foto2.png"
+alt="Projeto Gondopar"
+onclick="abrirImagem(1)">
+
+</div>
+
+
+<div class="foto">
+
+<img
+src="foto3.png"
+alt="Projeto Gondopar"
+onclick="abrirImagem(2)">
+
+</div>
+
+
+<div class="foto">
+
+<img
+src="foto4.png"
+alt="Projeto Gondopar"
+onclick="abrirImagem(3)">
+
+</div>
+
+
+<div class="foto">
+
+<img
+src="foto5.png"
+alt="Projeto Gondopar"
+onclick="abrirImagem(4)">
+
+</div>
+
+
+</section>
 
 </main>
 
 
-<!-- GALERIA EM TELA CHEIA -->
+
+<!-- VISUALIZAÇÃO DAS FOTOS -->
 
 <div id="modal" class="modal">
 
-    <button
-        class="fechar"
-        onclick="fecharImagem()"
-        aria-label="Fechar"
-    >
-        ×
-    </button>
 
-    <button
-        class="anterior"
-        onclick="imagemAnterior(event)"
-        aria-label="Imagem anterior"
-    >
-        ‹
-    </button>
+<button
+class="fechar"
+onclick="fecharImagem()">
 
-    <img
-        id="imagemModal"
-        alt="Projeto Gondopar"
-    >
+×
 
-    <button
-        class="proxima"
-        onclick="proximaImagem(event)"
-        aria-label="Próxima imagem"
-    >
-        ›
-    </button>
+</button>
 
-    <div
-        id="contador"
-        class="contador">
-    </div>
+
+<button
+class="anterior"
+onclick="imagemAnterior(event)">
+
+‹
+
+</button>
+
+
+<img
+id="imagemModal"
+alt="Projeto Gondopar">
+
+
+<button
+class="proxima"
+onclick="proximaImagem(event)">
+
+›
+
+</button>
+
+
+<div
+id="contador"
+class="contador">
+
+</div>
+
 
 </div>
 
 
-<!-- BOTÕES FLUTUANTES -->
 
-<div class="botoes-flutuantes">
+<!-- =====================================
+     BOTÕES FLUTUANTES
+===================================== -->
 
-    <!-- INSTAGRAM -->
-
-    <a
-        href="https://www.instagram.com/gondopar/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="botao-social instagram"
-        aria-label="Instagram Gondopar"
-        title="Siga a Gondopar no Instagram"
-    >
-        <i class="fa-brands fa-instagram"></i>
-
-        <span class="texto-social">
-            Instagram
-        </span>
-    </a>
+<div class="social-flutuante">
 
 
-    <!-- WHATSAPP -->
+<!-- INSTAGRAM -->
 
-    <a
-        href="https://wa.me/554184899144?text=Olá%21%20Conheci%20a%20Gondopar%20através%20dos%20cases%20e%20gostaria%20de%20mais%20informações."
-        target="_blank"
-        rel="noopener noreferrer"
-        class="botao-social whatsapp"
-        aria-label="WhatsApp Gondopar"
-        title="Fale com a Gondopar pelo WhatsApp"
-    >
-        <i class="fa-brands fa-whatsapp"></i>
+<a
+href="https://www.instagram.com/gondopar/"
+target="_blank"
+rel="noopener noreferrer"
+class="botao-instagram"
+title="Instagram Gondopar"
+aria-label="Instagram Gondopar">
 
-        <span class="texto-social">
-            Fale conosco
-        </span>
-    </a>
+<i class="fa-brands fa-instagram"></i>
+
+</a>
+
+
+
+<!-- WHATSAPP -->
+
+<a
+href="https://wa.me/554184899144?text=Olá%21%20Conheci%20a%20Gondopar%20através%20dos%20cases%20e%20gostaria%20de%20mais%20informações."
+target="_blank"
+rel="noopener noreferrer"
+class="botao-whatsapp"
+title="Fale conosco pelo WhatsApp"
+aria-label="WhatsApp Gondopar">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
 
 </div>
+
 
 
 <footer>
 
-    <strong>
-        GONDOPAR
-    </strong>
+<strong>
+GONDOPAR
+</strong>
 
-    <span>
-        Gôndolas e mobílias especiais.
-    </span>
+<span>
+Gôndolas e mobílias especiais.
+</span>
 
 </footer>
 
 
+
 <script>
 
+
 const imagens = [
-    "foto1.png",
-    "foto2.png",
-    "foto3.png",
-    "foto4.png",
-    "foto5.png"
+
+"foto1.png",
+"foto2.png",
+"foto3.png",
+"foto4.png",
+"foto5.png"
+
 ];
+
 
 let imagemAtual = 0;
 
 
-/* ABRIR IMAGEM */
 
-function abrirImagem(indice) {
+function abrirImagem(indice){
 
-    imagemAtual = indice;
-
-    document
-        .getElementById("modal")
-        .classList.add("ativo");
-
-    atualizarImagem();
-
-    document.body.style.overflow = "hidden";
-}
-
-
-/* FECHAR IMAGEM */
-
-function fecharImagem() {
-
-    document
-        .getElementById("modal")
-        .classList.remove("ativo");
-
-    document.body.style.overflow = "auto";
-}
-
-
-/* ATUALIZAR IMAGEM */
-
-function atualizarImagem() {
-
-    document.getElementById("imagemModal").src =
-        imagens[imagemAtual];
-
-    document.getElementById("contador").innerText =
-        (imagemAtual + 1) + " / " + imagens.length;
-}
-
-
-/* PRÓXIMA */
-
-function proximaImagem(event) {
-
-    if (event) {
-        event.stopPropagation();
-    }
-
-    imagemAtual++;
-
-    if (imagemAtual >= imagens.length) {
-        imagemAtual = 0;
-    }
-
-    atualizarImagem();
-}
-
-
-/* ANTERIOR */
-
-function imagemAnterior(event) {
-
-    if (event) {
-        event.stopPropagation();
-    }
-
-    imagemAtual--;
-
-    if (imagemAtual < 0) {
-        imagemAtual = imagens.length - 1;
-    }
-
-    atualizarImagem();
-}
-
-
-/* FECHAR CLICANDO FORA */
+imagemAtual = indice;
 
 document
-    .getElementById("modal")
-    .addEventListener("click", function(event) {
+.getElementById("modal")
+.classList.add("ativo");
 
-        if (event.target === this) {
-            fecharImagem();
-        }
+atualizarImagem();
 
-    });
+document.body.style.overflow = "hidden";
+
+}
+
+
+
+function fecharImagem(){
+
+document
+.getElementById("modal")
+.classList.remove("ativo");
+
+document.body.style.overflow = "auto";
+
+}
+
+
+
+function atualizarImagem(){
+
+document
+.getElementById("imagemModal")
+.src = imagens[imagemAtual];
+
+
+document
+.getElementById("contador")
+.innerText =
+(imagemAtual + 1)
++ " / "
++ imagens.length;
+
+}
+
+
+
+function proximaImagem(event){
+
+if(event){
+event.stopPropagation();
+}
+
+imagemAtual++;
+
+if(imagemAtual >= imagens.length){
+
+imagemAtual = 0;
+
+}
+
+atualizarImagem();
+
+}
+
+
+
+function imagemAnterior(event){
+
+if(event){
+event.stopPropagation();
+}
+
+imagemAtual--;
+
+if(imagemAtual < 0){
+
+imagemAtual =
+imagens.length - 1;
+
+}
+
+atualizarImagem();
+
+}
+
+
+
+/* FECHAR AO CLICAR FORA */
+
+document
+.getElementById("modal")
+.addEventListener(
+"click",
+function(event){
+
+if(event.target === this){
+
+fecharImagem();
+
+}
+
+});
+
 
 
 /* TECLADO */
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener(
+"keydown",
+function(event){
 
-    const modalAberto =
-        document
-            .getElementById("modal")
-            .classList.contains("ativo");
+const modalAberto =
+document
+.getElementById("modal")
+.classList
+.contains("ativo");
 
-    if (!modalAberto) {
-        return;
-    }
 
-    if (event.key === "Escape") {
-        fecharImagem();
-    }
+if(!modalAberto){
+return;
+}
 
-    if (event.key === "ArrowRight") {
-        proximaImagem(event);
-    }
 
-    if (event.key === "ArrowLeft") {
-        imagemAnterior(event);
-    }
+if(event.key === "Escape"){
+
+fecharImagem();
+
+}
+
+
+if(event.key === "ArrowRight"){
+
+proximaImagem(event);
+
+}
+
+
+if(event.key === "ArrowLeft"){
+
+imagemAnterior(event);
+
+}
 
 });
 
+
 </script>
+
 
 </body>
 
