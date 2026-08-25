@@ -1,61 +1,221 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Cases Gondopar</title>
+    <title>Cases | Gondopar</title>
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-  <div class="logo">GONDOPAR</div>
-  <p>Soluções e mobiliários especiais</p>
+    <div class="marca">
+        <div class="logo">GONDOPAR</div>
+        <div class="subtitulo">soluções e mobiliários especiais</div>
+    </div>
 </header>
+
 
 <main>
 
-  <section class="intro">
-    <span>CASE</span>
-    <h1>Projeto Farmácia</h1>
+    <section class="apresentacao">
 
-    <p>
-      Projeto desenvolvido com soluções Gondopar para criar um ambiente
-      moderno, funcional e organizado.
-    </p>
-  </section>
+        <span class="categoria">CASES GONDOPAR</span>
 
-  <section class="galeria">
+        <h1>Projetos que transformam espaços</h1>
 
-    <img src="imagens/foto1.jpg" onclick="abrirImagem(this.src)">
-    <img src="imagens/foto2.jpg" onclick="abrirImagem(this.src)">
-    <img src="imagens/foto3.jpg" onclick="abrirImagem(this.src)">
-    <img src="imagens/foto4.jpg" onclick="abrirImagem(this.src)">
-    <img src="imagens/foto5.jpg" onclick="abrirImagem(this.src)">
-    <img src="imagens/foto6.jpg" onclick="abrirImagem(this.src)">
+        <p>
+            Conheça alguns dos projetos desenvolvidos pela Gondopar,
+            unindo funcionalidade, organização e soluções personalizadas
+            para cada negócio.
+        </p>
 
-  </section>
+    </section>
+
+
+    <section class="galeria">
+
+        <div class="foto destaque">
+            <img src="foto1.jpg"
+                 alt="Projeto Gondopar"
+                 onclick="abrirImagem(0)">
+        </div>
+
+        <div class="foto">
+            <img src="foto2.jpg"
+                 alt="Projeto Gondopar"
+                 onclick="abrirImagem(1)">
+        </div>
+
+        <div class="foto">
+            <img src="foto3.jpg"
+                 alt="Projeto Gondopar"
+                 onclick="abrirImagem(2)">
+        </div>
+
+        <div class="foto">
+            <img src="foto4.jpg"
+                 alt="Projeto Gondopar"
+                 onclick="abrirImagem(3)">
+        </div>
+
+        <div class="foto">
+            <img src="foto5.jpg"
+                 alt="Projeto Gondopar"
+                 onclick="abrirImagem(4)">
+        </div>
+
+        <div class="foto">
+            <img src="foto6.jpg"
+                 alt="Projeto Gondopar"
+                 onclick="abrirImagem(5)">
+        </div>
+
+    </section>
 
 </main>
 
-<div id="modal" class="modal" onclick="fecharImagem()">
-  <span class="fechar">&times;</span>
-  <img id="imagemModal">
+
+<!-- VISUALIZAÇÃO EM TELA CHEIA -->
+
+<div id="modal" class="modal">
+
+    <button class="fechar" onclick="fecharImagem()">
+        ×
+    </button>
+
+    <button class="anterior" onclick="imagemAnterior(event)">
+        ‹
+    </button>
+
+    <img id="imagemModal" alt="Projeto Gondopar">
+
+    <button class="proxima" onclick="proximaImagem(event)">
+        ›
+    </button>
+
+    <div id="contador" class="contador"></div>
+
 </div>
+
+
+<footer>
+
+    <strong>GONDOPAR</strong>
+
+    <span>
+        Soluções completas para o seu negócio.
+    </span>
+
+</footer>
+
 
 <script>
 
-function abrirImagem(src) {
-  document.getElementById("modal").style.display = "flex";
-  document.getElementById("imagemModal").src = src;
+const imagens = [
+    "foto1.jpg",
+    "foto2.jpg",
+    "foto3.jpg",
+    "foto4.jpg",
+    "foto5.jpg",
+    "foto6.jpg"
+];
+
+let imagemAtual = 0;
+
+
+function abrirImagem(indice) {
+
+    imagemAtual = indice;
+
+    document.getElementById("modal").classList.add("ativo");
+
+    atualizarImagem();
+
+    document.body.style.overflow = "hidden";
 }
 
+
 function fecharImagem() {
-  document.getElementById("modal").style.display = "none";
+
+    document.getElementById("modal").classList.remove("ativo");
+
+    document.body.style.overflow = "auto";
 }
+
+
+function atualizarImagem() {
+
+    document.getElementById("imagemModal").src =
+        imagens[imagemAtual];
+
+    document.getElementById("contador").innerText =
+        (imagemAtual + 1) + " / " + imagens.length;
+}
+
+
+function proximaImagem(event) {
+
+    event.stopPropagation();
+
+    imagemAtual++;
+
+    if(imagemAtual >= imagens.length){
+        imagemAtual = 0;
+    }
+
+    atualizarImagem();
+}
+
+
+function imagemAnterior(event) {
+
+    event.stopPropagation();
+
+    imagemAtual--;
+
+    if(imagemAtual < 0){
+        imagemAtual = imagens.length - 1;
+    }
+
+    atualizarImagem();
+}
+
+
+document.getElementById("modal").addEventListener(
+    "click",
+    function(event){
+
+        if(event.target === this){
+            fecharImagem();
+        }
+
+    }
+);
+
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Escape"){
+            fecharImagem();
+        }
+
+        if(event.key === "ArrowRight"){
+            proximaImagem(event);
+        }
+
+        if(event.key === "ArrowLeft"){
+            imagemAnterior(event);
+        }
+
+    }
+);
 
 </script>
 
