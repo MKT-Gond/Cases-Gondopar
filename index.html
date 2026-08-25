@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cases Gondopar</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">GONDOPAR</div>
+  <p>Soluções e mobiliários especiais</p>
+</header>
+
+<main>
+
+  <section class="intro">
+    <span>CASE</span>
+    <h1>Projeto Farmácia</h1>
+
+    <p>
+      Projeto desenvolvido com soluções Gondopar para criar um ambiente
+      moderno, funcional e organizado.
+    </p>
+  </section>
+
+  <section class="galeria">
+
+    <img src="imagens/foto1.jpg" onclick="abrirImagem(this.src)">
+    <img src="imagens/foto2.jpg" onclick="abrirImagem(this.src)">
+    <img src="imagens/foto3.jpg" onclick="abrirImagem(this.src)">
+    <img src="imagens/foto4.jpg" onclick="abrirImagem(this.src)">
+    <img src="imagens/foto5.jpg" onclick="abrirImagem(this.src)">
+    <img src="imagens/foto6.jpg" onclick="abrirImagem(this.src)">
+
+  </section>
+
+</main>
+
+<div id="modal" class="modal" onclick="fecharImagem()">
+  <span class="fechar">&times;</span>
+  <img id="imagemModal">
+</div>
+
+<script>
+
+function abrirImagem(src) {
+  document.getElementById("modal").style.display = "flex";
+  document.getElementById("imagemModal").src = src;
+}
+
+function fecharImagem() {
+  document.getElementById("modal").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
